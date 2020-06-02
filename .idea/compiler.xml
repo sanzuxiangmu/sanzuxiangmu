@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jx-provider" />
+        <module name="jx-consumer-feign" />
+        <module name="jx-eureka" />
+        <module name="jx-service-api" />
+        <module name="jx-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jd-eureka" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jd-eureka" options="-parameters" />
+      <module name="jx-common" options="-parameters" />
+      <module name="jx-consumer-feign" options="-parameters" />
+      <module name="jx-eureka" options="-parameters" />
+      <module name="jx-provider" options="-parameters" />
+      <module name="jx-service-api" options="" />
+    </option>
+  </component>
+</project>

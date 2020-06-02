@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script type="text/javascript" th:src="@{../js/my97/WdatePicker.js}"></script>
+
+ </head>
+<body>
+<form role="form" id="formId">
+
+    <input   name="id" th:value="${c.id}"><br/>
+    <input   id="type" th:value="${c.type}"><br/>
+    <input   id="time2" th:value="${c.time}"><br/>
+   名称 <input type="text" name="name" th:value="${c.name}"><br/>
+    价格<input type="text" name="price" th:value="${c.price}"><br/>
+    数量<input type="text" name="count" th:value="${c.count}"><br/>
+     <input id="time" name="time" class="Wdate" th:value="${c.time}" type="text"  onClick="WdatePicker()">
+    <br>
+    类型
+    <input type="radio" name="type" value="1"  />1
+     <input type="radio" name="type" value="2"  />2
+    <input type="radio" name="type" value="3"  />3 <br/>
+</form>
+
+</body>
+<script>
+$(function(){
+    radio();
+    time();
+
+})
+
+    function radio() {
+    if ($("#type").val()==1){ $('[name="type"]').prop("checked",true);}
+    if ($("#type").val()==2){ $('[name="type"]').prop("checked",true);}
+    if ($("#type").val()==3){   $('[name="type"]').prop("checked",true)}
+    };
+
+    function time() {
+        var now = new Date($('#time').val());
+        var year = now.getFullYear();
+        var mon = now.getMonth()+1;
+        var date= now.getDate();
+        if(mon<10){
+            mon = '0'+mon;
+        };
+        if(date<10){
+            date = '0'+date;
+        }
+        var postDate = year+'-'+mon+'-'+date;
+
+        $("#time").val(postDate)
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,19 @@
+server:
+  port: 8070
+
+spring:
+  application:
+    name: jx-consumer
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka
+
+
+feign:
+  hystrix:
+    enabled: false
