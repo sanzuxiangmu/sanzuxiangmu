@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jx-provider" />
-        <module name="jx-consumer-feign" />
+        <module name="jx-common" />
         <module name="jx-eureka" />
         <module name="jx-service-api" />
-        <module name="jx-common" />
+        <module name="jx-consumer-feign" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
