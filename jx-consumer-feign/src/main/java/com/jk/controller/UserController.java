@@ -18,5 +18,11 @@ public class UserController {
         return userService.hello();
     }
 
+    @GetMapping("/hi")
+    @ResponseBody
+    public String hi(){
+        return userService.hi();
+    }
+
 
 }

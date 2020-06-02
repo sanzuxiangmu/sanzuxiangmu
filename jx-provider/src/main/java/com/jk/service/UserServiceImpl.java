@@ -17,4 +17,9 @@ public class UserServiceImpl implements UserService {
         return "调用成功...";
     }
 
+    @Override
+    public String hi() {
+        return "hi...";
+    }
+
 }

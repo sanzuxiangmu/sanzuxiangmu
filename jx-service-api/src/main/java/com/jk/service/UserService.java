@@ -10,7 +10,6 @@ public interface UserService {
     @GetMapping("/hello")
     String hello();
 
-
-
-
+    @GetMapping("/hi")
+    String hi();
 }
